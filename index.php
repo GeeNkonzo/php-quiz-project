@@ -12,6 +12,8 @@
 </head>
 <body>
 
+<!-- associative multi-dimenstional array created below with questions, options and correct answer in each question key  -->
+
 <?php
 
     $_SESSION['$questionnaire'] = $questionnaire = array(
@@ -237,33 +239,45 @@
                                             )
                         );
     ?>
-
-    <header class = "banner">
+    <!-- HTML used to create a banner in the header -->
+    <header class="banner">
         <div class="cover"></div>
-       <p>Grey's Anatomy<br> Quiz<br>
-       <a href="#start">
-            <img class = "arrow" src = "img/down-arrow.png"></p>
-        </a>
+        <p>Grey's Anatomy<br> Quiz<br>
+            <a href="#start">
+                    <img class="arrow" src="img/down-arrow.png">
+            </a>
+        </p>                  
     </header>
+    <!-- end of header -->
+
+    <!-- main content structure created cosisting of a background image, container for the spacing and placing of content. the main class is also added for the styling of content -->
     <div class="background">
-    <div class="container">
-        <div class="main">
-            <form action ="results.php" method = "post" id="start">
-                <?php
-                    foreach ($questionnaire as $big_key => $question) { ?>
-                    <h2><?php echo $question['question'] ?></h2>
-                        <?php  foreach ($question['options'] as $key => $option) {    
-                        ?>
-                        <div>
-                            <input type="radio" name = "user_input[<?php echo $big_key; ?>]" value = "<?php echo $key ?>" required>
-                            <label class = "label"><?php echo $option; ?></label>
-                        </div>
-                        <?php } ?>
-                <?php }; ?><br><br><br>
-                <center><input class="button" type ="submit" value="Submit!"></center>
-            </form>
+        <div class="container">
+            <div class="main">
+
+            <!-- form for array data to be populated in. this form uses the post method and action takes you to the results page -->
+                <form action="results.php" method="post" id="start">
+
+                <!-- foreach loops created to display the datastored in the array created above -->
+                    <?php
+                        foreach ($questionnaire as $big_key => $question) { ?>
+                        <h2><?php echo $question['question'] ?></h2>
+                            <?php  foreach ($question['options'] as $key => $option) {    
+                            ?>
+
+                            <!-- radio input type used to capture user input -->
+                            <div>
+                                <input type="radio" name="user_input[<?php echo $big_key; ?>]" value="<?php echo $key ?>" required>
+                                <label class="label"><?php echo $option; ?></label>
+                            </div>
+                            <?php } ?>
+                    <?php }; ?><br><br><br>
+
+                    <!-- Submit button -->
+                    <center><input class="button" type="submit" value="Submit!"></center>
+                </form>
+            </div>
         </div>
-    </div>
     </div>
 </body>
 </html>

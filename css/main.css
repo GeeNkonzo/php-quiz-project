@@ -1,3 +1,4 @@
+/* Base styles */
 * { 
     box-sizing: border-box;
 }
@@ -8,9 +9,27 @@ html {
 
 body {
     margin: 0;
-    /* background-color: #B3C5D7; */
     font-family: 'Rubik', sans-serif;
 }
+
+.container {
+    margin: 100px 20%;
+    background-color: #afd9e0;
+    /* #008CBA */
+}
+
+.main {
+    width:100%;
+    color:white;
+    padding: 50px;
+}
+
+h2 {
+    color:white;
+}
+
+
+/* Styling of the banner image and background image of the website */
 
 .background {
     background-image: url(../img/cast.jpg);
@@ -40,6 +59,7 @@ body {
 
 }
 
+/* Styling of the text in the banner */
 .banner p {
     z-index: 1;
     margin: 0;
@@ -49,7 +69,7 @@ body {
     color: white;
 }
 
-
+/* styling of the bouncy arrow image */
 .arrow {
     width: 100px;
     transform: translateY(80px);
@@ -68,21 +88,7 @@ body {
     }
 }
 
-.container {
-    margin: 100px 20%;
-    background-color: #afd9e0;
-    /* #008CBA */
-}
-
-.main {
-    width:100%;
-    color:white;
-    padding: 50px;
-}
-
-h2 {
-    color:white;
-}
+/* Button style */
 
 .button {
     background-color: white;
@@ -98,6 +104,7 @@ h2 {
     width: 50%;
 }
 
+/* styling for the results page */
 .results {
     color:white;
     font-size: 3em;
@@ -138,5 +145,10 @@ img {
 
     .background {
         background-image: none;
+    }
+
+    .button {
+        padding: 15px 10px;
+        
     }
 }
