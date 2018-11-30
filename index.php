@@ -258,19 +258,22 @@
             <!-- form for array data to be populated in. this form uses the post method and action takes you to the results page -->
                 <form action="results.php" method="post" id="start">
 
+                <!-- variable declaration for id of each option -->
+                <?php $id_tick = 0;?>
+
                 <!-- foreach loops created to display the datastored in the array created above -->
                     <?php
                         foreach ($questionnaire as $big_key => $question) { ?>
                         <h2><?php echo $question['question'] ?></h2>
                             <?php  foreach ($question['options'] as $key => $option) {    
                             ?>
-
+                            
                             <!-- radio input type used to capture user input -->
                             <div>
-                                <input type="radio" name="user_input[<?php echo $big_key; ?>]" value="<?php echo $key ?>" required>
-                                <label class="label"><?php echo $option; ?></label>
+                                <input id="<?php echo $id_tick;?>" type="radio" name="user_input[<?php echo $big_key; ?>]" value="<?php echo $key ?>" required>
+                                <label for="<?php echo $id_tick;?>"class="label"><?php echo $option; ?></label>
                             </div>
-                            <?php } ?>
+                            <?php $id_tick++; } ?>
                     <?php }; ?><br><br><br>
 
                     <!-- Submit button -->
