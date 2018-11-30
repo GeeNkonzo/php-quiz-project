@@ -2,7 +2,7 @@
 
 ## Introduction
 
- I created quiz to practice and apply what I have learned on php. So far the content I have covered on php are introductory. I have learnt variables, loops and sessions. I have that knowledge to create a multiple choice questionnaire of 20 questions that consist of 4 options per question.
+ I created a quiz to practice and apply what I have learned on PHP. So far the content I have covered on PHP are introductory. I have learnt more about variables, loops and sessions. I then used that knowledge to create a multiple choice questionnaire of 20 questions that consist of 4 options per question.
 
 
 ## Technologies
@@ -12,7 +12,7 @@
 - WAMP
 
 ## What you will need to access the quiz
-- WAMP (You will need to download and install if you do not have it on your PC already).
+- WAMP or equivalent (You will need to download and install if you do not have it on your PC already).
 - Clone this project from github to a folder.
 - Create a virtual host on WAMP and add the path of the folder.
 - Open and take quiz
@@ -22,7 +22,7 @@
 ## Tools used
 - VScode
 - Firefox - Developer Edition
-- Colors
+- Coolors
 - Github
 - VScode terminal
 
