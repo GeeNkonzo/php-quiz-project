@@ -11,9 +11,7 @@
 </head>
 <body>
     <!-- same classes used in index page are used on this page for consistency and uniform display  -->
-    <div class="background">
-        <div class="container">
-            <div class="main">
+        <div class="results-container" >
 
             <!-- isset function used to check that all questions have been answered and that there are no empty keys in the array. User input is assigned to a new variable for calculation purposes  -->
                 <?php
@@ -33,12 +31,12 @@
                 } ?>
                 
             <!-- results class used for specified styling located in the css file -->
-            <div class="results">  
+            <div class="results">
 
             <!-- if statement for a different messages according to the score obtained b the user -->
                 <?php
                     if($total==0) {
-                            echo "You got " .$total . " out of 20." .$break.' <img src = "../img/gifs/stare.gif"> ';
+                            echo "You got " .$total . " out of 20." .$break.' <img src = "../img/gifs/stare.gif" class="stare"> ';
                         }  
                             
                     elseif ($total >0 && $total <=10) {

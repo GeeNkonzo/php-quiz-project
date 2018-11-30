@@ -38,6 +38,17 @@ h2 {
     position: absolute;
 }
 
+.results-bg {
+    background-image: url(../img/cast.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+}
+
 .banner {
     display: flex;
     justify-content: flex-end;
@@ -107,16 +118,35 @@ h2 {
 /* styling for the results page */
 .results {
     color:white;
-    font-size: 3em;
-    padding: 50px;
+    font-size: 2.5em;
+    padding: 20px;
     text-align: center;
-    
+    margin:10px;
+    /* height: 100vh;     */
+}
+
+.results-container {
+    margin: 2% 20%;
+    background-color: #afd9e0;
+    padding: 20px;
 }
 
 img {
-    width:100%;
+    width:75%;
+}
+
+.stare {
+    width: 200px;
+    height: 200px;
 }
 /* Responsive Design */
+
+@media (max-width:600px) {
+    .results {
+        color:white;
+        font-size: 1.5em;
+    }
+}
 
 @media (max-width:600px) {
 
@@ -138,6 +168,27 @@ img {
 
 }
 
+@media (max-width:500px) {
+    .button {
+        padding: 15px 10px;
+        
+    }
+
+    img {
+        width: 50%;
+    }
+
+    .stare {
+        width: 150px;
+        height: 150px;
+    }
+
+    .results {
+        color:white;
+        font-size: 1em;
+    }
+}
+
 @media (max-width:400px) {
     h2 {
         font-size: 15px;
@@ -150,5 +201,12 @@ img {
     .button {
         padding: 15px 10px;
         
+    }
+
+}
+
+@media (max-width:400px) {
+    .button {
+        padding: 7px 3px;
     }
 }
